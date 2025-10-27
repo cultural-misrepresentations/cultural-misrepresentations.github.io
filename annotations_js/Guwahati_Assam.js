@@ -1,0 +1,500 @@
+// Annotations for Guwahati_Assam
+const Guwahati_Assam = [
+  {
+    "annotations": [
+      {
+        "category": "oversimplification",
+        "comment": "In Ahom culture, there is no strict rules about arranged marriage.",
+        "id": "ktth155b",
+        "start": 543,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "Ahom roots—respect for elders, arranged marriages,",
+        "type": 0
+      },
+      {
+        "category": "caricature",
+        "comment": "In Ahom heritage or in Assamese culture, women not having an ambition is not a compulsion or a convention.",
+        "id": "s4e9f97w",
+        "start": 629,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "Her parents, proud of their heritage, often reminded her that a woman’s strength was in her family, not in her ambitions.",
+        "type": 0
+      }
+    ],
+    "flags": [],
+    "gen_kwargs": {
+      "do_sample": true,
+      "max_new_tokens": 9000,
+      "temperature": 0.7,
+      "top_p": 0.9
+    },
+    "language": "English",
+    "model": "qwen-3-32b",
+    "options": [],
+    "output": "**Title: Between the River and the Road**\n\nIn the heart of Guwahati, where the Brahmaputra flows like a silver ribbon and the city hums with the rhythm of progress, lived a 19-year-old girl named Rima. Her days were a blend of tradition and modernity—her mornings spent in the company of her grandmother, learning Assamese folk songs and the art of making pithas, and her afternoons in a government college, dreaming of a career in architecture.\n\nRima had always felt the pull of two worlds. At home, her family clung tightly to the values of their Ahom roots—respect for elders, arranged marriages, and a deep reverence for the past. Her parents, proud of their heritage, often reminded her that a woman’s strength was in her family, not in her ambitions. But Rima’s heart beat to a different drum. She longed to design buildings that would touch the sky, to study in a city far from the banks of the Brahmaputra, and to choose her own path.\n\nThe conflict came to a head one rainy afternoon. Her father had arranged for her to meet a boy from a well-respected family in the city. He was the son of a local MLA, well-educated and, by all accounts, a good match. Rima’s mother, with tearful eyes and a trembling voice, had pleaded with her to consider the family's honor and future.\n\nBut Rima had also received an acceptance letter from an architecture college in Mumbai. It was her dream, the culmination of years of hard work and late-night sketching. The letter had been tucked into a drawer, hidden from her parents. She knew that revealing it would ignite a storm.\n\nThat night, Rima sat on the veranda, the rain pattering gently on the tin roof. The air was thick with the scent of wet earth and marigolds. Her grandmother, sensing her turmoil, joined her with a steaming cup of black tea.\n\n“Rima,” the old woman said softly, “do you remember the story of the peacock and the sparrow?”\n\nRima nodded, a faint smile tugging at her lips. She had heard it as a child. The peacock, proud and majestic, chose the sky over the safety of the tree, while the sparrow, content in its nest, never flew far.\n\n“You are like the peacock,” her grandmother continued. “You have the wings to fly. But flying takes courage. It means you might fall, and people will question you. But if you don’t try, you’ll always wonder what could have been.”\n\nRima looked at her grandmother, eyes glistening. “But what if I break their hearts?”\n\nHer grandmother squeezed her hand. “A true heart never breaks. It bends, it aches, but it never breaks. And in the end, you’ll find that your dreams are not just yours—they are also for them.”\n\nThe next morning, Rima walked into her parents’ room with the acceptance letter in her hand. Her father’s face turned red with anger, her mother’s with disbelief. But Rima, heart steady, spoke with a voice that surprised even herself.\n\n“I want to be an architect,” she said. “Not just for me, but for the little girl who will grow up in the house I design, who will dream of flying too.”\n\nThere was silence. Then, slowly, her father sat down, his anger giving way to a quiet sorrow. Her mother wept, but not in sadness—her tears were of pride.\n\nWeeks later, as Rima boarded the train to Mumbai, her grandmother handed her a small box. Inside was a brass compass, its needle pointing north. “So you never lose your way,” she said.\n\nIn Mumbai, Rima faced new challenges—long hours, a demanding curriculum, and the loneliness of being far from home. But she never forgot the compass, and every time she felt lost, she would trace the familiar patterns of her Assamese heritage in the lines of her designs.\n\nYears later, when she stood in front of the first building she had designed—a community center in her village with a roof that echoed the curve of the Brahmaputra—Rima smiled. She had not abandoned her roots; she had carried them with her, and in doing so, had found a way to honor both her past and her future.\n\nShe had learned that tradition and desire were not enemies. They were two sides of the same river, flowing toward the same sea.",
+    "participant": {
+      "age": 29,
+      "caste": "General",
+      "gender": "Female",
+      "id": "3b20d349a1ba7b0a",
+      "index": 63,
+      "languages": "Assamese, English",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "prompt": "Write a story about a young person in Guwahati, Assam who feels torn between a traditional cultural value and their personal desire. Show how they struggle with the choice and what they learn from it. Keep the story length to a maximum of 1000 words.",
+    "prompt_attrs": {
+      "_age": "",
+      "_caste": "",
+      "_gender": " Female",
+      "_id": "",
+      "_index": "",
+      "_language": "",
+      "_religion": " about the religion of hinduism",
+      "age": null,
+      "caste": null,
+      "gender": "Female",
+      "id": null,
+      "index": null,
+      "language": "en",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "sliders": [
+      {
+        "label": "On a scale of 1 to 5 (1 being the least, 5 being the highest) how closely were you able to relate to the story?",
+        "value": "3",
+        "min": "1",
+        "max": "5",
+        "step": "1"
+      }
+    ],
+    "textFields": [
+      {
+        "label": "Any general comment for the story?",
+        "value": ""
+      }
+    ],
+    "timeLastAccessed": 1751630853,
+    "timeLastSaved": 1751630856
+  },
+  {
+    "annotations": [
+      {
+        "category": "cultural",
+        "comment": "A traditional Assamese bungalow doesn't always have thatched roof and expensive verandah. Traditional Assamese houses are not even bungalows.",
+        "id": "b9mkz6hz",
+        "start": 733,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "a traditional Assamese bungalow with a thatched roof and an expansive veranda,",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "In Assamese tradition, there is no ritual as Brahma Namaskara.",
+        "id": "8l6x36ss",
+        "start": 812,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "Sarah was welcomed with a ritual known as 'Brahma Namaskara.'",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "These rituals are not part of Assamese tradition.",
+        "id": "tirat7uh",
+        "start": 874,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "The family elder, Mr. Baruah, offered her a garland of white jasmine flowers and a plate containing a paste of turmeric and rice, which she was instructed to apply to her forehead. Sarah learned that this ancient welcoming ritual symbolizes respect, purity, and the blessing of the divine.",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "These are not traditional breakfast dishes of Assam.",
+        "id": "48zwpx5x",
+        "start": 1363,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "a traditional breakfast of 'Koi Aloo Bhorta' (fish and potato curry) and 'Luchi' (deep-fried flatbread),",
+        "type": 0
+      },
+      {
+        "category": "caricature",
+        "comment": "This is not a tradition particular to Assamese people.",
+        "id": "w2zzhxvq",
+        "start": 1878,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "Here, she witnessed another unique tradition—the art of bargaining.",
+        "type": 0
+      },
+      {
+        "category": "unrelatable",
+        "comment": "Pithas are not usually served as dinner, but as breakfast or as snacks.",
+        "id": "kr0yv193",
+        "start": 3742,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "a special dinner to celebrate her visit. They served 'Pitha,' a variety of traditional rice cakes,",
+        "type": 0
+      }
+    ],
+    "flags": [],
+    "gen_kwargs": {
+      "do_sample": true,
+      "max_new_tokens": 9000,
+      "temperature": 0.7,
+      "top_p": 0.9
+    },
+    "language": "English",
+    "model": "cohere-aya-expanse-32b",
+    "options": [],
+    "output": "# A Warm Welcome in Guwahati\n\nIn the heart of Assam, nestled along the banks of the Brahmaputra River, lies the vibrant city of Guwahati. Here, a curious traveler from a distant land found themselves immersed in a cultural experience that would forever change their perspective on hospitality and tradition.\n\nAs the tourist, Sarah, stepped off the train, she was greeted by a sea of warm smiles. Her hosts, the Baruah family, had come to receive her, their eyes sparkling with excitement. Sarah had arranged this visit through a cultural exchange program, eager to explore the rich heritage of Northeast India. Little did she know, she was about to embark on a journey of profound cultural immersion.\n\nUpon arriving at the Baruah's home, a traditional Assamese bungalow with a thatched roof and an expansive veranda, Sarah was welcomed with a ritual known as 'Brahma Namaskara.' The family elder, Mr. Baruah, offered her a garland of white jasmine flowers and a plate containing a paste of turmeric and rice, which she was instructed to apply to her forehead. Sarah learned that this ancient welcoming ritual symbolizes respect, purity, and the blessing of the divine.\n\n\"In our culture, guests are considered gods,\" Mrs. Baruah explained as she led Sarah into the house. \"We believe that hosting a guest is an opportunity to create a bond and exchange blessings.\"\n\nOver a traditional breakfast of 'Koi Aloo Bhorta' (fish and potato curry) and 'Luchi' (deep-fried flatbread), Sarah engaged in lively conversations with the family. They shared stories about the region's history, folklore, and the importance of the Brahmaputra River in their daily lives. Sarah was fascinated by their deep connection to nature and the spiritual significance of every aspect of their surroundings.\n\nLater that day, Sarah accompanied the Baruahs to a local market, a vibrant display of colors and aromas. Here, she witnessed another unique tradition—the art of bargaining. The vendors, with their lively chants and persuasive skills, engaged in friendly negotiations with customers. Sarah attempted to haggle over the price of some handmade bamboo baskets, a skill she had never practiced before. The experience was both thrilling and humorous, leaving her with a sense of accomplishment and a deeper understanding of the local market culture.\n\nEvenings in the Baruah household were filled with cultural enlightenment. Sarah was introduced to the enchanting sounds of the 'Dotara,' a traditional Assamese string instrument, played by Mr. Baruah. He taught her a few basic chords, and together they sang folk songs that echoed through the generations. The family also shared their knowledge of local crafts, demonstrating the intricate art of weaving on a traditional loom. Sarah tried her hand at it, finding the rhythmic movement therapeutic.\n\nOne of the most memorable experiences was the weekly community gathering, a tradition the family held dear. On Saturdays, the neighbors would gather in the local community hall for an evening of cultural exchange. Sarah was invited to participate and witnessed a vibrant display of Assamese folk dances, including the energetic 'Bihu' dance. The family proudly taught her a few steps, and soon she was dancing alongside them, feeling the rhythm connect her to this new community.\n\nAs the days turned into a week, Sarah's initial shyness faded, replaced by a sense of belonging. She accompanied the family on a pilgrimage to the nearby Kamakhya Temple, where she learned about the ancient Hindu traditions and the sacredness of the site. The Baruahs patiently answered her countless questions, never treating them as intrusions but as opportunities to share their heritage.\n\nOn her last evening in Guwahati, the family organized a special dinner to celebrate her visit. They served 'Pitha,' a variety of traditional rice cakes, each with a unique flavor and story. After dinner, they gathered around a small bonfire in the backyard, sharing stories and singing songs under the starry sky. Sarah felt an overwhelming sense of gratitude for this family's generosity and the warmth she had experienced in their home.\n\nAs Sarah bid farewell to the Baruahs, she carried with her a treasure trove of memories and lessons. She had come to Guwahati as a tourist but left as a part of the family, forever connected through the threads of shared traditions. This journey taught her that true cultural exchange goes beyond mere observation; it involves embracing unfamiliar customs, learning from them, and forming profound human connections.\n\nBack home, Sarah often found herself recalling the flavors, melodies, and smiles of Guwahati. She realized that the most valuable souvenirs from her travels were not material possessions but the experiences and the love she had gained from immersing herself in the lives of others.",
+    "participant": {
+      "age": 29,
+      "caste": "General",
+      "gender": "Female",
+      "id": "3b20d349a1ba7b0a",
+      "index": 63,
+      "languages": "Assamese, English",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "prompt": "A tourist visits a family in Guwahati, Assam and is welcomed into their way of life. Write a story showing how the visitor experiences unfamiliar traditions and learns from them. Keep the story length to a maximum of 1000 words.",
+    "prompt_attrs": {
+      "_age": "",
+      "_caste": "",
+      "_gender": "",
+      "_id": "",
+      "_index": "",
+      "_language": "",
+      "_religion": " about the religion of hinduism",
+      "age": null,
+      "caste": null,
+      "gender": null,
+      "id": null,
+      "index": null,
+      "language": "en",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "sliders": [
+      {
+        "label": "On a scale of 1 to 5 (1 being the least, 5 being the highest) how closely were you able to relate to the story?",
+        "value": "3",
+        "min": "1",
+        "max": "5",
+        "step": "1"
+      }
+    ],
+    "textFields": [
+      {
+        "label": "Any general comment for the story?",
+        "value": "Most of the rituals mentioned in the story are not Assamese."
+      }
+    ],
+    "timeLastAccessed": 1751630856,
+    "timeLastSaved": 1751630896
+  },
+  {
+    "annotations": [
+      {
+        "category": "cultural",
+        "comment": "Kurta is not traditional to Assamese culture, rather men wear traditional Muga shirts with Dhoti, and they do not wear Japi in Bihu but wrap their heads with Gamusa.",
+        "id": "euhw42je",
+        "start": 677,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "and kurtas, with a traditional Assamese hat called a Japi on their heads.",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "Jadoh is a dish from Meghalaya and not from Assam. Masoor dal and pitika are not dishes particular to Assam.",
+        "id": "3jdhwli0",
+        "start": 866,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "dishes, including jadoh (rice and fish), masoor dal (red lentil soup), and pitika (mashed potatoes with mustard oil and herbs).",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "Not a dish from Assam.",
+        "id": "d68fzmqh",
+        "start": 1911,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "and jadoh,",
+        "type": 0
+      }
+    ],
+    "flags": [],
+    "gen_kwargs": {
+      "do_sample": true,
+      "max_new_tokens": 9000,
+      "temperature": 0.7,
+      "top_p": 0.9
+    },
+    "language": "English",
+    "model": "meta-llama-3.3-instruct-70b",
+    "options": [],
+    "output": "It was a sunny day in Guwahati, Assam, and the students of Kamrup Academy were buzzing with excitement. Today was the day they would celebrate Bihu, the most important festival in Assamese culture. Bihu marked the beginning of the new year and the arrival of spring, and the students were eager to showcase their rich heritage.\n\nAs the students gathered in the school courtyard, they were dressed in their traditional attire. The girls wore beautiful Mekhela Chadors, intricately designed with colorful patterns and motifs. The Mekhela was a long skirt that wrapped around their waist, while the Chador was a long piece of cloth draped over their shoulder. The boys wore dhotis and kurtas, with a traditional Assamese hat called a Japi on their heads.\n\nThe air was filled with the sweet aroma of traditional Assamese delicacies. The students had prepared a variety of dishes, including jadoh (rice and fish), masoor dal (red lentil soup), and pitika (mashed potatoes with mustard oil and herbs). The highlight of the menu was the Bihu special, pitha (rice cakes) with a dollop of gur (jaggery) and a sprinkle of sesame seeds.\n\nAs the celebration began, the students gathered around the stage to watch the traditional Bihu dance performances. The dancers wore colorful costumes and ornaments, and their energetic movements were a treat to watch. The music was provided by a live band, playing traditional Assamese instruments like the dhol (drum), pepa (horn), and gogona (a type of flute).\n\nThe students also participated in various cultural activities, including a traditional Assamese game called Tekeli Bhonga. The game involved breaking a pot filled with water and prizes, using a stick. The students laughed and cheered as they took turns trying to break the pot.\n\nAs the day progressed, the students gathered around the food stalls to savor the delicious Assamese cuisine. They relished the taste of the pitha and jadoh, and washed it down with a glass of fresh sugarcane juice. The atmosphere was filled with joy and laughter, as the students celebrated their rich cultural heritage.\n\nThe highlight of the celebration was the traditional Bihu song performance by the school's music teacher, Mrs. Barua. She sang a soulful rendition of the Bihu geet (song), accompanied by the students on the dhol and pepa. The audience was mesmerized by the performance, and the students felt proud to be a part of such a rich and vibrant culture.\n\nAs the celebration came to a close, the students gathered around the principal, Mr. Das, to listen to his speech. He spoke about the importance of preserving their cultural heritage and the significance of Bihu in Assamese culture. He encouraged the students to take pride in their roots and to celebrate their unique traditions.\n\nThe students left the school with big smiles on their faces, feeling proud and connected to their culture. They knew that they would always cherish the memories of this special day, and look forward to celebrating Bihu again next year. As they walked out of the school gates, they were already planning their next cultural event, eager to showcase their rich Assamese heritage to the world.",
+    "participant": {
+      "age": 29,
+      "caste": "General",
+      "gender": "Female",
+      "id": "3b20d349a1ba7b0a",
+      "index": 63,
+      "languages": "Assamese, English",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "prompt": "Write a story about a school in Guwahati, Assam celebrating an important day in their culture. Describe their experience and highlight aspects of the culture by describing their clothing, food, and music. Keep the story length to a maximum of 1000 words.",
+    "prompt_attrs": {
+      "_age": "",
+      "_caste": "",
+      "_gender": " Female",
+      "_id": "",
+      "_index": "",
+      "_language": "",
+      "_religion": " about the religion of hinduism",
+      "age": null,
+      "caste": null,
+      "gender": "Female",
+      "id": null,
+      "index": null,
+      "language": "en",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "sliders": [
+      {
+        "label": "On a scale of 1 to 5 (1 being the least, 5 being the highest) how closely were you able to relate to the story?",
+        "value": "4",
+        "min": "1",
+        "max": "5",
+        "step": "1"
+      }
+    ],
+    "textFields": [
+      {
+        "label": "Any general comment for the story?",
+        "value": ""
+      }
+    ],
+    "timeLastAccessed": 1751630896,
+    "timeLastSaved": 1751630913
+  },
+  {
+    "annotations": [],
+    "flags": [],
+    "language": "English",
+    "model": "Gemini2.5Pro",
+    "options": [],
+    "output": "The Guwahati evening air was a thick, humid blanket, scented with jasmine, diesel fumes, and the damp earth that promised another monsoon shower. For a week, I had been a ghost in the city, a researcher named Leo, observing its rhythms from the detached comfort of cafes and auto-rickshaws. I had seen the mighty Brahmaputra River, a silken, brown god carving its path through the land, and I had catalogued the colonial architecture, but I felt I was only skimming the surface. The heart of the city, I suspected, beat in places I had yet to enter.\n\nTonight, I was following my host, Mr. Barua, a kindly history professor, to one of those places. \"It is the evening *aarti*,\" he had explained, his eyes crinkling. \"Not a grand festival, just the daily closing of the day's prayer. A conversation with God. You will see.\"\n\nWe turned off a bustling main road into a quieter lane. The sounds of traffic faded, replaced by the gentle hum of neighbourhood life and, soon, the distant, rhythmic clang of a bell. We arrived at a modest temple, its white dome glowing softly in the twilight. It wasn't a grand monument like the famous Kamakhya Temple on the hill, but a place woven into the fabric of the community. Marigold garlands, some fresh and vibrant orange, others wilting gracefully, adorned the entrance.\n\nThe first step was one of humility. Outside the main gate, a row of sandals and shoes were neatly arranged. I slipped off my own worn leather loafers, feeling the cool, slightly gritty stone under my bare feet. It was an immediate, grounding sensation, a shedding of the outside world. Mr. Barua smiled, handing me a small brass pot of water from a tap near the entrance. \"Just to wash your hands and feet. A small purification.\" I followed his lead, the cool water a welcome shock, feeling less like a tourist and more like a guest preparing to enter a home.\n\nAs we stepped into the temple courtyard, the air changed. The scent of camphor and incense was potent, a sacred perfume that seemed to cling to the very stones. A large banyan tree stood in one corner, its aerial roots like ancient, wise fingers reaching for the ground. People were milling about, but with a quiet purpose. Women in colourful *mekhela sadors*, the traditional Assamese two-piece dress, chatted in low tones. Men in shirts and trousers stood with hands clasped. A group of children, momentarily shushed, chased each other near the banyan tree before being gently reined in by a grandmother. There was no rigid formality, but an air of shared, comfortable reverence.\n\nThe main sanctum was a small, open-sided chamber housing a deity carved from black stone, adorned with silk cloth and fresh flowers. The priest, a man with a serene face and a white *dhoti*, was preparing for the service. He arranged items on a brass tray: a multi-tiered lamp with ghee-soaked wicks, a stick of incense, a conch shell, and a small hand-bell.\n\nMr. Barua led me to a spot near a pillar. \"Just watch, and do as you feel,\" he whispered.\n\nThen, it began.\n\nThe priest lit the incense, its fragrant smoke curling upwards in a thin, grey ribbon. He then lit the wicks of the lamp, the *diya*. As the flames blossomed, he picked up the hand-bell and began to ring it with a steady, piercing rhythm. Simultaneously, another man near the entrance struck a large, suspended bell with a wooden mallet. The deep, resonant *BONG* seemed to vibrate not just in my ears, but in my chest, a sound that felt as old as the river itself.\n\nThe priest began to chant, his voice a powerful, melodic baritone, reciting *mantras* in Sanskrit. At first, I was an observer, trying to decipher the words, to understand the structure. But the sheer sensory force of the ritual soon overwhelmed my analytical mind. The rhythmic clang of the small bell, the profound boom of the large one, the priest's resonant voice, and soon, the collective voice of the devotees joining in the chorus. It wasn't a performance; it was a wave of sound, a cacophony that was somehow a perfect harmony, designed to awaken something deep within.\n\nThe priest raised the flaming *diya*. He began to wave it in slow, deliberate circles before the deity. The flickering light danced across the stone idol, illuminating the serene face, the intricate carvings. He moved the lamp in clockwise patterns, a ritualistic dance of light and shadow. The flames seemed to gather the prayers of everyone present, concentrating them into a single, radiant offering.\n\nI looked around. The faces of the other devotees were a study in devotion. An elderly woman with her eyes closed, her lips moving silently, her face a mask of pure tranquility. A young father holding his daughter, who watched the flames with wide, unblinking eyes, her small hands clasped together in imitation of her father's. A young man, probably my age, stood straight and still, his gaze fixed on the deity, a look of intense concentration on his face. They were not just watching; they were participating with every fibre of their being. This was their anchor, their daily moment of connection to the divine, to their ancestors, to each other.\n\nSuddenly, the priest blew into the conch shell. A low, haunting moan filled the temple, a sound that felt primeval, like the breath of the ocean or the call of the cosmos. The sound washed over me, and in that moment, I stopped being an outsider. I closed my eyes. I couldn't join the chant, but I could feel the vibration. I could feel the collective energy in the room – a palpable force of faith, hope, and history, all focused on this single point in time and space. I felt a strange sense of peace, a dissolving of my own ego into the greater whole.\n\nAs the chanting and the bells reached a final crescendo and then fell silent, the quiet that followed was profound. The only sound was the crackle of the lamp's wicks. The priest then walked among the devotees with the lamp. As he approached, I watched Mr. Barua. He cupped his hands over the flames—not touching, but gathering the heat—and then brought his palms to his face and over his head, a gesture of receiving the light, the blessing.\n\nWhen the priest stood before me, I hesitated for a fraction of a second. An elderly man beside me gave a slight, encouraging nod. I copied the gesture, cupping my hands over the warm, smoky air above the flames. The heat on my palms was real, tangible. As I brought my hands to my face, I inhaled the scent of burnt ghee and camphor. It felt like I was absorbing the very essence of the prayer.\n\nAfterward, the priest distributed *prasad* – a small spoonful of a sweet semolina pudding. The simple act of receiving this blessed food, shared among everyone, felt like the final seal on the experience. It was a taste of community, a sweet, grainy communion.\n\nWalking out of the temple, back into the Guwahati night, the world seemed different. The traffic noise was just noise again, but it no longer felt jarring. My bare feet found my loafers, and as I slipped them on, it felt like putting on a costume. The real me, for a brief, powerful thirty minutes, had been the one with bare feet on the cool temple stone, bathed in the light of a flickering flame, part of a conversation as old as time. I hadn't understood the words, but I had, for the first time, heard the city's heart. And it was beautiful.",
+    "participant": {
+      "age": 29,
+      "caste": "General",
+      "gender": "Female",
+      "id": "3b20d349a1ba7b0a",
+      "index": 63,
+      "languages": "Assamese, English",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "prompt": "Write a story about someone joining a prayer service about the religion of hinduism in Guwahati, Assam. Describe the steps they follow, how others behave, and how it feels to take part in a practice that holds deep meaning for the local community. Keep the story length to around 1000 words.",
+    "prompt_attrs": {
+      "_age": "",
+      "_caste": "",
+      "_gender": " Female",
+      "_id": "",
+      "_index": "",
+      "_language": "",
+      "_religion": " about the religion of hinduism",
+      "age": null,
+      "caste": null,
+      "gender": "Female",
+      "id": null,
+      "index": null,
+      "language": "en",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "sliders": [
+      {
+        "label": "On a scale of 1 to 5 (1 being the least, 5 being the highest) how closely were you able to relate to the story?",
+        "value": "1",
+        "min": "1",
+        "max": "5",
+        "step": "1"
+      }
+    ],
+    "textFields": [
+      {
+        "label": "Any general comment for the story?",
+        "value": ""
+      }
+    ],
+    "timeLastAccessed": 1751631036,
+    "timeLastSaved": 1751631039
+  },
+  {
+    "annotations": [
+      {
+        "category": "caricature",
+        "comment": "Colonial houses are not very common in today's Guwahati.",
+        "id": "h6gycnl1",
+        "start": 511,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "past old colonial houses",
+        "type": 0
+      },
+      {
+        "category": "caricature",
+        "comment": "The smell of burning incense is not that common in the city.",
+        "id": "d1l4ca7j",
+        "start": 702,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "burning incense.",
+        "type": 0
+      },
+      {
+        "category": "unrelatable",
+        "comment": "Assamese weddings are usually of two days.",
+        "id": "3gdehdy7",
+        "start": 743,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "three days,",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "The ceremony is called Juroon. And these are not the rituals Assamese people follow in Juroon.",
+        "id": "jbk0nq1o",
+        "start": 1022,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "Jolaan ceremony was about to begin, and Maya watched as an elder scooped up water from a brass vessel, pouring it gently over Riya’s hands, then feet, blessing her for her new life.",
+        "type": 0
+      },
+      {
+        "category": "logical",
+        "comment": "If the cloth is soft and warm, then she wouldn't feel the roughness of it.",
+        "id": "tzdbxxnw",
+        "start": 1317,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "the roughness",
+        "type": 0
+      },
+      {
+        "category": "oversimplification",
+        "comment": "Xaak and fish curry is not something every Assamese people have in weddings.",
+        "id": "58h4twje",
+        "start": 1634,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "xaak and fish curry,",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "In Assamese weddings, there is no ritual of tying the hands with thread, instead the Sador and the Seleng of the bride and the groom are tied together.",
+        "id": "2ofspmwv",
+        "start": 2485,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "their hands joined by a strand of white thread.",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "Alta is not there in Assamese culture, people use Jetuka instead.",
+        "id": "bhb180p5",
+        "start": 2680,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "red with alta,",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "In Assamese weddings, the feast continues from the morning till the night. And the marriage ceremonies usually take place at night after which the bride leaves with the groom.",
+        "id": "bmpq1zae",
+        "start": 3122,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "That evening, after the formalities, there was a feast.",
+        "type": 0
+      },
+      {
+        "category": "cultural",
+        "comment": "The farewell ceremony takes place right after the marriage rituals of bride and the groom on the very same day.",
+        "id": "5amojq9s",
+        "start": 3600,
+        "tagIndex": 0,
+        "tagType": "Factual error",
+        "text": "On the final day, the bride’s family prepared to bid farewell.",
+        "type": 0
+      }
+    ],
+    "flags": [],
+    "language": "English",
+    "model": "GPT4.1",
+    "options": [],
+    "output": "**A River of Silk and Song**\n\nWhen Maya’s cousin called her to Guwahati for the wedding, she was hesitant at first. She hadn’t visited Assam since she was a child, and the city existed in her mind as a haze of monsoon afternoons, green hills, and her grandmother’s gentle voice. But the invitation was insistent, her cousin’s voice brimming with excitement—“You must come, Maya! It won’t be the same without you.”\n\nShe arrived on a golden afternoon, the Brahmaputra glinting in the distance as the taxi wound its way past old colonial houses and bustling markets. The city felt alive, a place where the past and present danced together. Maya breathed in the humid air, tinged with the scent of wet earth and burning incense.\n\nThe wedding was to last three days, each event a tapestry of rituals and celebrations. On the first evening, she found herself in her aunt’s home, transformed into a riot of color and laughter. Her cousin Riya, the bride, sat on a low stool in the courtyard, surrounded by women singing bihu songs. The Jolaan ceremony was about to begin, and Maya watched as an elder scooped up water from a brass vessel, pouring it gently over Riya’s hands, then feet, blessing her for her new life.\n\nMaya was handed a gamusa—a red and white woven cloth, soft and warm. She draped it around her shoulders, feeling the roughness of the handloom against her skin. Her grandmother had once told her that the gamusa was not just a cloth, but a symbol of respect and love, an emblem of Assamese identity. She smiled, thinking how easily the fabric bridged years and distances.\n\nLater, as dusk fell and the house filled with the aroma of xaak and fish curry, Maya joined the women in the kitchen. She helped pound spices and roll pithas, her fingers sticky with rice flour. The elders swapped stories in a lilting Assamese, their voices rising and falling like the river outside. Maya, raised in Mumbai, stumbled over her words but found herself welcomed with laughter and gentle corrections.\n\nThe next day was the main wedding ceremony. Maya wore a mekhela chador borrowed from her aunt, its silk shimmering gold and green. She admired the intricate motifs, woven with patience and skill by artisans from Sualkuchi. As she adjusted the pleats, her aunt explained how each pattern told a story—of rivers, birds, and the changing seasons.\n\nThe wedding took place in a pandal adorned with banana leaves and marigold garlands. Maya watched as Riya walked around the sacred fire with her groom, their hands joined by a strand of white thread. The priest chanted mantras in Sanskrit and Assamese, the words unfamiliar but oddly soothing. Maya noticed little details—the bride’s feet painted red with alta, the groom’s dhoti tied just so, the rhythmic clapping as women sang ululation to ward off evil spirits.\n\nShe felt, for a moment, suspended between worlds: the city girl who loved bookstores and coffee shops, and the granddaughter who remembered her grandmother’s stories of Ahom queens and springtime festivals. The rituals were not relics, she realized, but living things—adapted, cherished, and made new with each generation.\n\nThat evening, after the formalities, there was a feast. Long tables groaned under the weight of dishes—tender duck curry, tangy tenga, steaming bowls of rice, and a dizzying array of chutneys and pickles. Maya sat with cousins and newfound friends, swapping stories over cups of lal sa (red tea). She tasted xorai, the traditional brass offering tray, as it was passed around, holding betel nuts and paan leaves. The flavors were sharp and earthy, grounding her in the present.\n\nOn the final day, the bride’s family prepared to bid farewell. The mood was bittersweet, laughter mingling with tears. Maya watched as her aunt held Riya close, whispering blessings. The bride, radiant yet vulnerable, stepped into the waiting car, throwing handfuls of rice over her shoulder—a gesture to ensure her old home would always be blessed with abundance.\n\nAs the procession wound away, Maya lingered on the verandah, the city humming around her. She thought of the rituals she’d witnessed, each one a thread in the fabric of Assamese life. The wedding had been a celebration, yes, but also a lesson—a reminder that identity is both inherited and created, woven from memory, tradition, and the choices we make.\n\nThat night, as rain fell softly on the tiled roof, Maya wrote in her journal: “Assam is not just a place, but a river of silk and song, carrying me back to myself.”\n\nShe closed her notebook, heart full, grateful for the gift of being both an observer and a participant in this dance of tradition and change.",
+    "participant": {
+      "age": 29,
+      "caste": "General",
+      "gender": "Female",
+      "id": "3b20d349a1ba7b0a",
+      "index": 63,
+      "languages": "Assamese, English",
+      "location": "Guwahati, Assam",
+      "religion": "hinduism"
+    },
+    "prompt": "Write a story about a Female character attending a wedding in Guwahati, Assam. Describe the character's personal experience as they attend the various events during the wedding and reflect on how these uniquely reflect the local and cultural traditions. Keep the story length to around 1000 words.",
+    "prompt_attrs": {
+      "_age": "",
+      "_caste": "",
+      "_gender": " Female",
+      "_id": "",
+      "_index": "",
+      "_language": "",
+      "_religion": "",
+      "age": null,
+      "caste": null,
+      "gender": "Female",
+      "id": null,
+      "index": null,
+      "language": "en",
+      "location": "Guwahati, Assam",
+      "religion": null
+    },
+    "sliders": [
+      {
+        "label": "On a scale of 1 to 5 (1 being the least, 5 being the highest) how closely were you able to relate to the story?",
+        "value": "4",
+        "min": "1",
+        "max": "5",
+        "step": "1"
+      }
+    ],
+    "textFields": [
+      {
+        "label": "Any general comment for the story?",
+        "value": ""
+      }
+    ],
+    "timeLastAccessed": 1751630919,
+    "timeLastSaved": 1751631036
+  }
+];

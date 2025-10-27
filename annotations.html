@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Annotations - Cultural Misrepresentations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.65;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 12px 20px;
+        }
+
+        nav .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            gap: 25px;
+            padding-left: 20px;
+        }
+
+        nav a {
+            color: #2c5aa0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #234a85;
+        }
+
+        nav a.active {
+            color: #1a1a1a;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 2px;
+        }
+
+        .header {
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 25px 20px 20px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header h1 {
+            font-size: 1.9em;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c5aa0;
+        }
+
+        .header p {
+            opacity: 0.75;
+            font-size: 1em;
+            color: #666;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .location-selector {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .location-selector h2 {
+            color: #1a1a1a;
+            margin-bottom: 18px;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        .location-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .location-btn {
+            background: #ffffff;
+            color: #2c5aa0;
+            border: 1.5px solid #2c5aa0;
+            padding: 14px 24px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .location-btn:hover {
+            background: #2c5aa0;
+            color: white;
+            border-color: #2c5aa0;
+        }
+
+        .annotation-viewer {
+            display: none;
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+        }
+
+        .annotation-viewer.active {
+            display: block;
+        }
+
+        .story-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .story-counter {
+            font-size: 1.05em;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: #234a85;
+        }
+
+        .nav-btn:disabled {
+            background: #d0d0d0;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .story-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .story-text {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            line-height: 1.8;
+            font-size: 1.05em;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .story-text h1 {
+            color: #1a1a1a;
+            font-size: 1.75em;
+            margin: 24px 0 16px 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .story-text h2 {
+            color: #1a1a1a;
+            font-size: 1.4em;
+            margin: 20px 0 14px 0;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .story-text h3 {
+            color: #1a1a1a;
+            font-size: 1.2em;
+            margin: 16px 0 12px 0;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .story-text strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .story-text em {
+            font-style: italic;
+            color: #444;
+        }
+
+        .story-text p {
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .annotation-highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            border-radius: 2px;
+            border-bottom: 2px solid #ffc107;
+        }
+
+        .annotation-highlight:hover {
+            background-color: #ffe69c;
+        }
+
+        .annotation-highlight.active {
+            background-color: #ff9800;
+            color: white;
+            border-bottom-color: #f57c00;
+        }
+
+        .annotations-panel {
+            background: #fafafa;
+            padding: 24px;
+            border-radius: 4px;
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid #e8e8e8;
+        }
+
+        .annotations-panel h3 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: #fafafa;
+            padding: 12px 0;
+            z-index: 10;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .annotation-item {
+            background: white;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            border-left: 3px solid #2c5aa0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .annotation-item:hover {
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .annotation-item.active {
+            border-left-color: #ff9800;
+            background: #fffbf0;
+        }
+
+        .annotation-category {
+            display: inline-block;
+            background: #2c5aa0;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .annotation-text {
+            font-style: italic;
+            color: #666;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .annotation-comment {
+            color: #333;
+            margin-top: 8px;
+        }
+
+        .metadata-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .metadata-section h3 {
+            color: #1a1a1a;
+            margin-bottom: 14px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .metadata-item {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .metadata-label {
+            font-weight: bold;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .metadata-value {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .back-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .back-btn:hover {
+            background: #234a85;
+        }
+
+        .rating-display {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 4px;
+            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .rating-display h3 {
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .rating-display strong {
+            color: #2c5aa0;
+        }
+
+        @media (max-width: 968px) {
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .location-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .category-cultural { background: #c0392b; }
+        .category-linguistic { background: #8e44ad; }
+        .category-logical { background: #d68910; }
+        .category-oversimplification { background: #5d6d7e; }
+        .category-unrelatable { background: #34495e; }
+        .category-comments { background: #27ae60; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="annotations.html" class="active">Annotations</a>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>📝 Annotation Viewer</h1>
+        <p>Explore cultural misrepresentations in LLM-generated stories</p>
+    </div>
+
+    <div class="container">
+        <div class="location-selector" id="locationSelector">
+            <h2>Select a Location</h2>
+            <div class="location-buttons">
+                <button class="location-btn" data-file="Bengaluru_Karnataka.jsonl">Bengaluru, Karnataka</button>
+                <button class="location-btn" data-file="Guwahati_Assam.jsonl">Guwahati, Assam</button>
+                <button class="location-btn" data-file="Imphal-East_Manipur.jsonl">Imphal-East, Manipur</button>
+                <button class="location-btn" data-file="Kasaragod_Kerala.jsonl">Kasaragod, Kerala</button>
+                <button class="location-btn" data-file="Kolkata_West Bengal.jsonl">Kolkata, West Bengal</button>
+                <button class="location-btn" data-file="Nilgiris_Tamil Nadu.jsonl">Nilgiris, Tamil Nadu</button>
+            </div>
+        </div>
+
+        <div class="annotation-viewer" id="annotationViewer">
+            <button class="back-btn" id="backBtn">← Back to Locations</button>
+            
+            <div class="story-navigation">
+                <div class="story-counter" id="storyCounter">Story 1 of 0</div>
+                <div class="nav-buttons">
+                    <button class="nav-btn" id="prevBtn">← Previous</button>
+                    <button class="nav-btn" id="nextBtn">Next →</button>
+                </div>
+            </div>
+
+            <div class="metadata-section" id="metadataSection"></div>
+
+            <div class="story-container">
+                <div class="story-text" id="storyText"></div>
+                <div class="annotations-panel">
+                    <h3>Annotations (<span id="annotationCount">0</span>)</h3>
+                    <div id="annotationsList"></div>
+                </div>
+            </div>
+
+            <div class="rating-display" id="ratingDisplay"></div>
+        </div>
+    </div>
+
+    <!-- Load annotation data -->
+    <script src="annotations_js/index.js"></script>
+    <script src="annotations_js/Bengaluru_Karnataka.js"></script>
+    <script src="annotations_js/Guwahati_Assam.js"></script>
+    <script src="annotations_js/Imphal-East_Manipur.js"></script>
+    <script src="annotations_js/Kasaragod_Kerala.js"></script>
+    <script src="annotations_js/Kolkata_West Bengal.js"></script>
+    <script src="annotations_js/Nilgiris_Tamil Nadu.js"></script>
+
+    <script>
+        // Map filenames to JavaScript variables
+        const annotationData = {
+            'Bengaluru_Karnataka.jsonl': Bengaluru_Karnataka,
+            'Guwahati_Assam.jsonl': Guwahati_Assam,
+            'Imphal-East_Manipur.jsonl': Imphal_East_Manipur,
+            'Kasaragod_Kerala.jsonl': Kasaragod_Kerala,
+            'Kolkata_West Bengal.jsonl': Kolkata_West_Bengal,
+            'Nilgiris_Tamil Nadu.jsonl': Nilgiris_Tamil_Nadu
+        };
+
+        let currentLocation = null;
+        let currentStoryIndex = 0;
+        let currentStories = [];
+
+        // Location button event listeners
+        document.querySelectorAll('.location-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filename = this.dataset.file;
+                loadLocation(filename);
+            });
+        });
+
+        // Navigation event listeners
+        document.getElementById('backBtn').addEventListener('click', () => {
+            document.getElementById('locationSelector').style.display = 'block';
+            document.getElementById('annotationViewer').classList.remove('active');
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStoryIndex > 0) {
+                currentStoryIndex--;
+                displayStory(currentStoryIndex);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentStoryIndex < currentStories.length - 1) {
+                currentStoryIndex++;
+                displayStory(currentStoryIndex);
+            }
+        });
+
+        function loadLocation(filename) {
+            currentLocation = filename;
+            
+            // Load the annotation data
+            if (annotationData[filename]) {
+                currentStories = annotationData[filename];
+                currentStoryIndex = 0;
+                
+                // Show the viewer
+                document.getElementById('locationSelector').style.display = 'none';
+                document.getElementById('annotationViewer').classList.add('active');
+                
+                // Display the first story
+                displayStory(0);
+            } else {
+                alert(`No data found for ${filename}`);
+            }
+        }
+
+        function parseJSONL(jsonlText) {
+            const lines = jsonlText.trim().split('\n');
+            return lines.map(line => JSON.parse(line));
+        }
+
+        function convertMarkdown(text) {
+            // Convert markdown to HTML
+            // Bold: **text** or __text__
+            text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            text = text.replace(/__(.+?)__/g, '<strong>$1</strong>');
+            
+            // Italic: *text* or _text_
+            text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+            text = text.replace(/_(.+?)_/g, '<em>$1</em>');
+            
+            // Headers: # text
+            text = text.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            text = text.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+            text = text.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+            
+            return text;
+        }
+
+        function highlightTextInElement(element, searchText, annId) {
+            // Recursively search through text nodes and wrap matches
+            const walker = document.createTreeWalker(
+                element,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            
+            const nodesToReplace = [];
+            let node;
+            
+            while (node = walker.nextNode()) {
+                const text = node.nodeValue;
+                const index = text.indexOf(searchText);
+                
+                if (index !== -1) {
+                    nodesToReplace.push({
+                        node: node,
+                        index: index,
+                        length: searchText.length
+                    });
+                    break; // Only highlight first occurrence
+                }
+            }
+            
+            // Replace nodes (doing this outside the walker to avoid issues)
+            nodesToReplace.forEach(item => {
+                const text = item.node.nodeValue;
+                const before = text.substring(0, item.index);
+                const match = text.substring(item.index, item.index + item.length);
+                const after = text.substring(item.index + item.length);
+                
+                const fragment = document.createDocumentFragment();
+                
+                if (before) {
+                    fragment.appendChild(document.createTextNode(before));
+                }
+                
+                const span = document.createElement('span');
+                span.className = 'annotation-highlight';
+                span.setAttribute('data-ann-id', annId);
+                span.textContent = match;
+                fragment.appendChild(span);
+                
+                if (after) {
+                    fragment.appendChild(document.createTextNode(after));
+                }
+                
+                item.node.parentNode.replaceChild(fragment, item.node);
+            });
+        }
+
+        function displayStory(index) {
+            const story = currentStories[index];
+            
+            // Update counter
+            document.getElementById('storyCounter').textContent = `Story ${index + 1} of ${currentStories.length}`;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === currentStories.length - 1;
+            
+            // Display metadata
+            displayMetadata(story);
+            
+            // Display story with highlights
+            displayStoryText(story);
+            
+            // Display annotations
+            displayAnnotationsList(story);
+            
+            // Display rating
+            displayRating(story);
+        }
+
+        function displayMetadata(story) {
+            const metadata = story.participant || {};
+            
+            // Clean up the prompt by removing technical instructions
+            let cleanPrompt = story.prompt || '';
+            if (cleanPrompt) {
+                // Remove sentences about word limits, length restrictions, etc.
+                cleanPrompt = cleanPrompt
+                    .replace(/Keep the story length to (a maximum of |around |approximately )?\d+ words\.?/gi, '')
+                    .replace(/The story should be (around|approximately|a maximum of) \d+ words\.?/gi, '')
+                    .replace(/\s+/g, ' ')  // Clean up extra spaces
+                    .trim();
+            }
+            
+            const html = `
+                <h3>Story Information</h3>
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <div class="metadata-label">Model</div>
+                        <div class="metadata-value">${story.model || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Language</div>
+                        <div class="metadata-value">${story.language || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Location</div>
+                        <div class="metadata-value">${metadata.location || 'N/A'}</div>
+                    </div>
+                </div>
+                ${cleanPrompt ? `
+                <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 5px; border-left: 4px solid #667eea;">
+                    <div class="metadata-label">Prompt</div>
+                    <div class="metadata-value" style="margin-top: 8px; font-style: italic; color: #555;">"${cleanPrompt}"</div>
+                </div>
+                ` : ''}
+            `;
+            document.getElementById('metadataSection').innerHTML = html;
+        }
+
+        function displayStoryText(story) {
+            const text = story.output || '';
+            const annotations = story.annotations || [];
+            
+            // First convert markdown formatting
+            let processedText = convertMarkdown(text);
+            
+            // Convert line breaks to paragraphs
+            processedText = processedText.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
+            processedText = '<p>' + processedText + '</p>';
+            
+            // Now we need to find and highlight the annotation text in the processed HTML
+            // We'll use a placeholder approach
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = processedText;
+            
+            // Sort annotations by start position (descending) to process from end to start
+            const sortedAnnotations = [...annotations].sort((a, b) => b.start - a.start);
+            
+            // For each annotation, find the text in the original and mark it
+            sortedAnnotations.forEach((ann) => {
+                const searchText = ann.text;
+                const textContent = tempDiv.textContent || tempDiv.innerText;
+                
+                // Find the position in the plain text
+                const plainTextPos = textContent.indexOf(searchText);
+                
+                if (plainTextPos !== -1) {
+                    // Use a more sophisticated approach to wrap the text
+                    highlightTextInElement(tempDiv, searchText, ann.id);
+                }
+            });
+            
+            document.getElementById('storyText').innerHTML = tempDiv.innerHTML;
+            
+            // Add click handlers to highlights
+            document.querySelectorAll('.annotation-highlight').forEach(el => {
+                el.addEventListener('click', function() {
+                    const annId = this.dataset.annId;
+                    scrollToAnnotation(annId);
+                });
+            });
+        }
+
+        function displayAnnotationsList(story) {
+            const annotations = story.annotations || [];
+            document.getElementById('annotationCount').textContent = annotations.length;
+            
+            const html = annotations.map(ann => {
+                const categoryClass = `category-${ann.category || 'comments'}`;
+                return `
+                    <div class="annotation-item" data-ann-id="${ann.id}">
+                        <span class="annotation-category ${categoryClass}">${ann.category || 'comment'}</span>
+                        <div class="annotation-text">"${ann.text}"</div>
+                        <div class="annotation-comment">${ann.comment}</div>
+                    </div>
+                `;
+            }).join('');
+            
+            document.getElementById('annotationsList').innerHTML = html;
+            
+            // Add click handlers
+            document.querySelectorAll('.annotation-item').forEach(el => {
+                el.addEventListener('click', function() {
+                    const annId = this.dataset.annId;
+                    highlightAnnotation(annId);
+                });
+            });
+        }
+
+        function displayRating(story) {
+            const sliders = story.sliders || [];
+            const textFields = story.textFields || [];
+            
+            let html = '<h3>Annotator Feedback</h3>';
+            
+            if (sliders.length > 0) {
+                html += sliders.map(slider => `
+                    <p><strong>${slider.label}:</strong> ${slider.value}</p>
+                `).join('');
+            }
+            
+            if (textFields.length > 0) {
+                html += textFields.map(field => {
+                    if (field.value) {
+                        return `<p><strong>${field.label}:</strong> ${field.value}</p>`;
+                    }
+                    return '';
+                }).join('');
+            }
+            
+            document.getElementById('ratingDisplay').innerHTML = html;
+        }
+
+        function scrollToAnnotation(annId) {
+            // Remove previous highlights
+            document.querySelectorAll('.annotation-item.active, .annotation-highlight.active').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Highlight selected annotation
+            const annItem = document.querySelector(`.annotation-item[data-ann-id="${annId}"]`);
+            const annHighlight = document.querySelector(`.annotation-highlight[data-ann-id="${annId}"]`);
+            
+            if (annItem) {
+                annItem.classList.add('active');
+                annItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            
+            if (annHighlight) {
+                annHighlight.classList.add('active');
+            }
+        }
+
+        function highlightAnnotation(annId) {
+            scrollToAnnotation(annId);
+        }
+
+        // Show instructions on page load
+        window.addEventListener('load', () => {
+            console.log('Annotation Viewer loaded. Select a location to view annotations.');
+        });
+    </script>
+</body>
+</html>
+

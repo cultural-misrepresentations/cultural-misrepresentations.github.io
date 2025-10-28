@@ -600,13 +600,13 @@
     </div>
 
     <!-- Load annotation data -->
-    <script src="annotations_js/index.js"></script>
-    <script src="annotations_js/Bengaluru_Karnataka.js"></script>
-    <script src="annotations_js/Guwahati_Assam.js"></script>
-    <script src="annotations_js/Imphal-East_Manipur.js"></script>
-    <script src="annotations_js/Kasaragod_Kerala.js"></script>
-    <script src="annotations_js/Kolkata_West Bengal.js"></script>
-    <script src="annotations_js/Nilgiris_Tamil Nadu.js"></script>
+    <script src="assets/js/annotations_js/index.js"></script>
+    <script src="assets/js/annotations_js/Bengaluru_Karnataka.js"></script>
+    <script src="assets/js/annotations_js/Guwahati_Assam.js"></script>
+    <script src="assets/js/annotations_js/Imphal-East_Manipur.js"></script>
+    <script src="assets/js/annotations_js/Kasaragod_Kerala.js"></script>
+    <script src="assets/js/annotations_js/Kolkata_West Bengal.js"></script>
+    <script src="assets/js/annotations_js/Nilgiris_Tamil Nadu.js"></script>
 
     <script>
         // Map filenames to JavaScript variables
@@ -661,7 +661,7 @@
             
             // Create wrapper for proper positioning
             let mapHTML = '<div style="position: relative; display: inline-block; width: 85%; margin: 0 auto;">';
-            mapHTML += '<img src="india_map.png" alt="Map of India with study locations" style="width: 100%; display: block;" />';
+            mapHTML += '<img src="assets/images/india_map.png" alt="Map of India with study locations" style="width: 100%; display: block;" />';
             
             // Add interactive markers for each location
             Object.keys(locationCoordinates).forEach(filename => {

@@ -1,2 +1,7 @@
-# GitHub Pages configuration for static HTML site
-# No theme needed - using plain HTML files
+# Site settings
+title: Cultural Representation of AI-Generated Stories
+description: Research on cultural bias and misrepresentation in Large Language Models
+url: "https://cultural-misrepresentations.github.io"
+
+# Build settings
+# Using static HTML files - no Jekyll theme needed

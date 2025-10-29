@@ -14,45 +14,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.65;
-            color: #1a1a1a;
+            color: #2c3e50;
             background: #ffffff;
-        }
-
-        nav {
-            background: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 12px 20px;
-        }
-
-        nav .nav-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            gap: 25px;
-            padding-left: 20px;
-        }
-
-        nav a {
-            color: #2c5aa0;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95em;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: #234a85;
-        }
-
-        nav a.active {
-            color: #1a1a1a;
-            border-bottom: 2px solid #2c5aa0;
-            padding-bottom: 2px;
         }
 
         .header {
             background: #ffffff;
-            color: #1a1a1a;
+            color: #2c3e50;
             padding: 25px 20px 20px 20px;
             text-align: center;
             border-bottom: 1px solid #e0e0e0;
@@ -62,7 +30,7 @@
             font-size: 1.9em;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #2c5aa0;
+            color: #2c3e50;
         }
 
         .header p {
@@ -77,185 +45,70 @@
             max-width: 1300px;
             margin: 0 auto;
             padding: 20px;
-            background: #fafafa;
+            background: #ffffff;
         }
 
         .location-map-wrapper {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 30px;
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
-            align-items: start;
         }
 
         .location-selector {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border: 1px solid #e8e8e8;
+            padding: 35px 30px;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            max-width: 650px;
+            width: 100%;
         }
 
         .location-selector h2 {
-            color: #1a1a1a;
-            margin-bottom: 18px;
-            font-weight: 600;
-            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-size: 0.95em;
+            text-align: center;
+            line-height: 1.6;
         }
 
         .location-buttons {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-        }
-
-        .map-container {
-            border-radius: 0;
-            overflow: visible;
-            border: none;
-            background: #fafafa;
-            padding: 0;
-            padding-left: 100px;
-            box-shadow: none;
-        }
-        
-        @media (max-width: 968px) {
-            .location-map-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        #indiaMap {
-            width: 100%;
-            background: transparent;
-            position: relative;
-            display: inline-block;
-            margin: 0 auto;
-        }
-        
-        #indiaMap img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .location-marker-interactive {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: rgba(255, 107, 107, 0.8);
-            border: 3px solid white;
-            cursor: pointer;
-            pointer-events: all;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
-        
-        .location-marker-interactive:hover {
-            transform: scale(1.4);
-            background: rgba(255, 107, 107, 1);
-            z-index: 100;
-        }
-        
-        .location-tooltip {
-            position: absolute;
-            background: white;
-            color: #1a5f7a;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            white-space: nowrap;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            border: 2px solid #1a5f7a;
-            z-index: 1000;
-        }
-        
-        .location-marker-interactive:hover + .location-tooltip {
-            opacity: 1;
-        }
-
-        #indiaMap svg {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-        }
-
-        .india-map-path {
-            fill: #2c5aa0;
-            stroke: #1a3a6b;
-            stroke-width: 1;
-            transition: all 0.3s ease;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .india-map-path:hover {
-            fill: #234a85;
-            filter: brightness(1.1);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .location-marker {
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: markerPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes markerPulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.15); opacity: 0.8; }
-        }
-
-        .location-marker:hover {
-            transform: scale(1.3) !important;
-        }
-
-        .location-label {
-            font-size: 13px;
-            fill: #1a1a1a;
-            font-weight: 600;
-            pointer-events: none;
-            text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+            gap: 10px;
         }
 
         .location-btn {
             background: #ffffff;
-            color: #1a5f7a;
-            border: 2px solid #1a5f7a;
-            padding: 15px 20px;
+            color: #34495e;
+            border: 2px solid #34495e;
+            padding: 14px 24px;
             border-radius: 8px;
             font-size: 1em;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-weight: 500;
-            box-shadow: 0 2px 4px rgba(26, 95, 122, 0.1);
-            text-align: left;
+            box-shadow: 0 2px 4px rgba(52, 73, 94, 0.1);
+            text-align: center;
         }
 
         .location-btn:hover {
-            background: #1a5f7a;
-            color: white;
-            border-color: #1a5f7a;
-            transform: translateX(5px);
-            box-shadow: 0 4px 8px rgba(26, 95, 122, 0.25);
+            background: #34495e;
+            color: #ffffff;
+            border-color: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 73, 94, 0.2);
         }
 
         .annotation-viewer {
             display: none;
             background: white;
             padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            border: 1px solid #e8e8e8;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            border-top: 1px solid #e0e0e0;
         }
 
         .annotation-viewer.active {
@@ -268,8 +121,9 @@
             align-items: center;
             margin-bottom: 20px;
             padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            background: #ffffff;
+            border-radius: 0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .story-counter {
@@ -284,11 +138,11 @@
         }
 
         .nav-btn {
-            background: #2c5aa0;
+            background: #34495e;
             color: white;
-            border: none;
-            padding: 10px 22px;
-            border-radius: 4px;
+            border: 2px solid #34495e;
+            padding: 10px 24px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 0.95em;
             transition: all 0.2s ease;
@@ -296,11 +150,16 @@
         }
 
         .nav-btn:hover:not(:disabled) {
-            background: #234a85;
+            background: #2c3e50;
+            border-color: #2c3e50;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(44, 62, 80, 0.2);
         }
 
         .nav-btn:disabled {
-            background: #d0d0d0;
+            background: #f0f0f0;
+            border-color: #e0e0e0;
+            color: #999;
             cursor: not-allowed;
             opacity: 0.6;
         }
@@ -487,11 +346,11 @@
         }
 
         .back-btn {
-            background: #2c5aa0;
+            background: #34495e;
             color: white;
-            border: none;
-            padding: 10px 22px;
-            border-radius: 4px;
+            border: 2px solid #34495e;
+            padding: 10px 24px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 0.95em;
             margin-bottom: 20px;
@@ -500,7 +359,10 @@
         }
 
         .back-btn:hover {
-            background: #234a85;
+            background: #2c3e50;
+            border-color: #2c3e50;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(44, 62, 80, 0.2);
         }
 
         .rating-display {
@@ -541,23 +403,14 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="annotations.html" class="active">Annotations</a>
-        </div>
-    </nav>
-
     <div class="header">
-        <h1>📝 Annotation Viewer</h1>
-        <p>Explore cultural misrepresentations in LLM-generated stories</p>
+        <h1>Annotation Viewer</h1>
     </div>
 
     <div class="container">
         <div class="location-map-wrapper">
-            <!-- Location buttons on the left -->
             <div class="location-selector" id="locationSelector">
-                <h2>Select a Location</h2>
+                <h2>Select a location to view stories and see the cultural misrepresentations identified by expert annotators.</h2>
                 <div class="location-buttons">
                     <button class="location-btn" data-file="Bengaluru_Karnataka.jsonl">Bengaluru, Karnataka</button>
                     <button class="location-btn" data-file="Guwahati_Assam.jsonl">Guwahati, Assam</button>
@@ -566,11 +419,6 @@
                     <button class="location-btn" data-file="Kolkata_West Bengal.jsonl">Kolkata, West Bengal</button>
                     <button class="location-btn" data-file="Nilgiris_Tamil Nadu.jsonl">Nilgiris, Tamil Nadu</button>
                 </div>
-            </div>
-
-            <!-- Map on the right -->
-            <div class="map-container">
-                <div id="indiaMap"></div>
             </div>
         </div>
 
@@ -635,56 +483,6 @@
         // Kolkata: 88.3639, 22.5726 -> x = 67.88%, y = 44.76%
         // Nilgiris: 76.6950, 11.4102 -> x = 28.98%, y = 81.96%
         
-        const locationCoordinates = {
-            'Bengaluru_Karnataka.jsonl': { x: 32.0, y: 76.8, name: 'Bengaluru, Karnataka' },
-            'Guwahati_Assam.jsonl': { x: 79.1, y: 32.9, name: 'Guwahati, Assam' },
-            'Imphal-East_Manipur.jsonl': { x: 86.5, y: 37.3, name: 'Imphal-East, Manipur' },
-            'Kasaragod_Kerala.jsonl': { x: 23.4, y: 78.3, name: 'Kasaragod, Kerala' },
-            'Kolkata_West Bengal.jsonl': { x: 67.9, y: 44.8, name: 'Kolkata, West Bengal' },
-            'Nilgiris_Tamil Nadu.jsonl': { x: 29.0, y: 82.0, name: 'Nilgiris, Tamil Nadu' }
-        };
-
-        // Function to load location from map click
-        window.loadLocationFromMap = function(filename) {
-            loadLocation(filename);
-        };
-
-        // Initialize the India map with interactive markers
-        function initializeMap() {
-            console.log('Loading India map with interactive markers...');
-            const mapElement = document.getElementById('indiaMap');
-            
-            if (!mapElement) {
-                console.error('Map element not found!');
-                return;
-            }
-            
-            // Create wrapper for proper positioning
-            let mapHTML = '<div style="position: relative; display: inline-block; width: 85%; margin: 0 auto;">';
-            mapHTML += '<img src="assets/images/india_map.png" alt="Map of India with study locations" style="width: 100%; display: block;" />';
-            
-            // Add interactive markers for each location
-            Object.keys(locationCoordinates).forEach(filename => {
-                const loc = locationCoordinates[filename];
-                mapHTML += `
-                    <div class="location-marker-interactive" 
-                         style="left: ${loc.x}%; top: ${loc.y}%; transform: translate(-50%, -50%);"
-                         onclick="loadLocationFromMap('${filename}')"
-                         data-location="${filename}">
-                    </div>
-                    <div class="location-tooltip" 
-                         style="left: ${loc.x}%; top: ${loc.y - 4}%; transform: translate(-50%, -100%);">
-                        ${loc.name}
-                    </div>
-                `;
-            });
-            
-            mapHTML += '</div>';
-            mapElement.innerHTML = mapHTML;
-            
-            console.log('India map with interactive markers loaded successfully!');
-        }
-
         // Location button event listeners
         document.querySelectorAll('.location-btn').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -695,10 +493,10 @@
 
         // Navigation event listeners
         document.getElementById('backBtn').addEventListener('click', () => {
-            // Show the location selector wrapper (including map) again
-            const locationMapWrapper = document.querySelector('.location-map-wrapper');
-            if (locationMapWrapper) {
-                locationMapWrapper.style.display = 'grid';
+            // Show the location selector again
+            const locationSelector = document.getElementById('locationSelector');
+            if (locationSelector) {
+                locationSelector.style.display = 'block';
             }
             
             // Hide the annotation viewer
@@ -727,10 +525,10 @@
                 currentStories = annotationData[filename];
                 currentStoryIndex = 0;
                 
-                // Hide the entire location selector wrapper (including map)
-                const locationMapWrapper = document.querySelector('.location-map-wrapper');
-                if (locationMapWrapper) {
-                    locationMapWrapper.style.display = 'none';
+                // Hide the location selector
+                const locationSelector = document.getElementById('locationSelector');
+                if (locationSelector) {
+                    locationSelector.style.display = 'none';
                 }
                 
                 // Show the viewer
@@ -1003,15 +801,6 @@
         // Show instructions on page load
         window.addEventListener('load', () => {
             console.log('Annotation Viewer loaded. Select a location to view annotations.');
-            // Try to initialize map after a delay to ensure Leaflet is loaded
-            setTimeout(() => {
-                if (typeof initializeMap === 'function') {
-                    console.log('Calling initializeMap from window.load');
-                    initializeMap();
-                } else {
-                    console.error('initializeMap function not found');
-                }
-            }, 500);
         });
     </script>
 </body>
